@@ -1,0 +1,8 @@
+{
+  "name": "a-levels",
+  "version": "0.0.0",
+  "dependencies": {
+    "d3": "3.4.9",
+    "topojson": "1.6.14"
+  }
+}
