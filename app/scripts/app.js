@@ -34,6 +34,6 @@ app.config(function ($routeProvider) {
       });
   });
 
-app.run(function($rootScope, mapDataService) {
-  $rootScope.mapData = mapDataService.getMapData();
-});
+//app.run(function($rootScope, mapDataService) {
+//  $rootScope.mapData = mapDataService.getMapData();
+//});
