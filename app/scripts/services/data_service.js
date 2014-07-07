@@ -1,7 +1,6 @@
 'use strict';
 
-angular.module('dataService', []).
-  .service('mapDataService', function($http){
+app.service('mapDataService', function($http){
 
     var url = 'data/regions_england_wgs84.topo.json';
 

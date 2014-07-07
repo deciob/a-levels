@@ -33,3 +33,7 @@ app.config(function ($routeProvider) {
         redirectTo: '/'
       });
   });
+
+app.run(function($rootScope, mapDataService) {
+  $rootScope.mapData = mapDataService.getMapData();
+});

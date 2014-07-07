@@ -9,11 +9,9 @@
  */
 
 angular.module('aLevelsApp')
-  .controller('MainCtrl', function ($scope, mapDataService) {
+  .controller('MainCtrl', function ($rootScope, $scope, mapDataService) {
 
-    $scope.mapData = mapDataService.getMapData();
-
-    //console.log($scope, 'xxxxxxxxxxxxxxxxxx');
+    $scope.mapData = $rootScope.mapData;//mapDataService.getMapData();
 
   });
 
