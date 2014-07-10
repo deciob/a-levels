@@ -24,7 +24,7 @@ app.service('aLevelDataService', function($http){
 
 });
 
-app.service('parseCsvData', function(){
+app.service('parseCsvDataService', function(){
 
   this.parse = function(data, accessor) {
     if (accessor !== undefined) {

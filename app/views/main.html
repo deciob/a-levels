@@ -1,2 +1,3 @@
-
-<england-regions-map></england-regions-map>
+<div ng-repeat="stat in data.thematic">
+  <england-regions-map thematic-data="data.thematic" geom-data="data.geom" index={{$index}} title="{{stat.title}}"></england-regions-map>
+</div>
