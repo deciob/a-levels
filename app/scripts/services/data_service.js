@@ -6,8 +6,32 @@ app.service('mapDataService', function($http){
 
     var resource = $http.get(url);
 
-    this.getMapData = function() {
+    this.getData = function() {
       return resource;
     };
 
+});
+
+app.service('aLevelDataService', function($http){
+
+    var url = 'data/a_levels_regional_urban.csv';
+
+    var resource = $http.get(url);
+
+    this.getData = function() {
+      return resource;
+    };
+
+});
+
+app.service('parseCsvData', function(){
+
+  this.parse = function(data, accessor) {
+    if (accessor !== undefined) {
+      return d3.csv.parse(data, accessor);
+    } else {
+      return d3.csv.parse(data);
+    }
+  }
+  
 });
