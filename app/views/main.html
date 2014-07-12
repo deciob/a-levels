@@ -1,3 +1,8 @@
-<div ng-repeat="stat in data.thematic">
-  <england-regions-map thematic-data="data.thematic" geom-data="data.geom" index={{$index}} title="{{stat.title}}"></england-regions-map>
-</div>
+<section ng-repeat="stat in data.thematic">
+  <div class="urban">
+    <england-regions-map thematic-data="{{ stat[0] }}" geom-data="data.geom" title="{{stat[0].title}} - {{stat[0].type}}"></england-regions-map>
+  </div>
+  <div class="rural">
+    <england-regions-map thematic-data="{{ stat[1] }}" geom-data="data.geom" title="{{stat[1].title}} - {{stat[1].type}}"></england-regions-map>
+  </div>  
+</section>

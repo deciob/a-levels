@@ -1,23 +1,22 @@
 'use strict';
 
-app.directive('englandRegionsMap', function() {
+app.directive('englandRegionsMap', function(slugifyNameService) {
   return {
     restrict: 'E',
     template: '<div class="map">{{title}}</div>',
     scope: {
-      thematicData: '=',
+      thematicData: '@',
       geomData: '=',
-      index: '@',
       title: '@'
     },
     link: function(scope, element, attr) {
 
-      console.log(scope.thematicData[scope.index]);
+      //console.log(JSON.parse(scope.thematicData));
 
       var el = element[0],
           width = 165,
           height = 187,
-          thematicData = scope.thematicData[scope.index],
+          thematicData = JSON.parse(scope.thematicData),
           numericData = d3.values(thematicData).filter(function(el){
             return typeof el === "number" ? el : void 0;
           });
@@ -31,10 +30,8 @@ app.directive('englandRegionsMap', function() {
           .attr('height', height);
       
       function slugifyName(name){
-        return name.replace(' Euro Region', '').replace(/ /g, '_').toLowerCase();
+        return slugifyNameService.slugify(name.replace(' Euro Region', ''));
       }
-
-
 
       var regions = topojson.feature(
         scope.geomData, scope.geomData.objects.european_region_england_wgs84);
@@ -60,7 +57,6 @@ app.directive('englandRegionsMap', function() {
           return d3.hsl(200, scale(thematicData[slugifyName(d.properties.NAME)]), 
             .3).toString();
         });
-
 
     }
   };
