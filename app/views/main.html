@@ -1,8 +1,37 @@
-<section ng-repeat="stat in data.thematic">
-  <div class="urban">
-    <england-regions-map thematic-data="{{ stat[0] }}" geom-data="data.geom" title="{{stat[0].title}} - {{stat[0].type}}"></england-regions-map>
-  </div>
-  <div class="rural">
-    <england-regions-map thematic-data="{{ stat[1] }}" geom-data="data.geom" title="{{stat[1].title}} - {{stat[1].type}}"></england-regions-map>
-  </div>  
+<section class="viz">
+
+  <section class="bar-block">
+  </section>
+
+  <section class="map-block">
+
+    <p>Urban</p>
+    
+    <div class="flex">
+      <section ng-repeat="stat in data.thematic">
+        
+        <england-regions-map thematic-data="{{ stat[0] }}" geom-data="data.geom"></england-regions-map>
+        
+      </section>
+    </div>
+
+    <p>Rural</p>
+
+    <div class="flex">
+      <section ng-repeat="stat in data.thematic">
+
+        <england-regions-map thematic-data="{{ stat[1] }}" geom-data="data.geom" ></england-regions-map>
+
+        <div>
+          <p>{{stat[1].title}}</p>
+        </div>
+      
+      </section>
+    </div>
+
+
+   
+
+  </section>
+
 </section>

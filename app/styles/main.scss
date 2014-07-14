@@ -1,12 +1,91 @@
 // bower:scss
 // endbower
 
-//.region.eastern { fill: #8D4945; }
-//.region.east_midlands { fill: #9A556A; }
-//.region.london { fill: #956B90; }
-//.region.north_west { fill: #7B85AD; }
-//.region.west_midlands { fill: #549FB9; }
-//.region.yorkshire_and_the_humber { fill: #38B6AF; }
-//.region.south_east { fill: #58C896; }
-//.region.north_east { fill: #94D476; }
-//.region.south_west { fill: #D7D95F; }
+.q0-9 { fill:rgb(247,251,255); }
+.q1-9 { fill:rgb(222,235,247); }
+.q2-9 { fill:rgb(198,219,239); }
+.q3-9 { fill:rgb(158,202,225); }
+.q4-9 { fill:rgb(107,174,214); }
+.q5-9 { fill:rgb(66,146,198); }
+.q6-9 { fill:rgb(33,113,181); }
+.q7-9 { fill:rgb(8,81,156); }
+.q8-9 { fill:rgb(8,48,107); }
+
+.q {
+  stroke: #F3F3F3; 
+  stroke-width: .6px;
+}
+
+
+.viz {
+  display: -webkit-flex;
+  display: flex;
+
+  height: 80%;
+  width: 100%;
+
+  .hide {
+    display: none;
+  }
+  .map-block, .bar-block {
+    padding: 20px;
+  }
+  section.bar-block {
+    -webkit-flex: 1;
+    flex: 1;
+    background-color: #375f99;
+    margin-right: 1px;
+  }
+  section.map-block {
+    -webkit-flex: 3;
+    flex: 3;
+
+    //display: -webkit-flex;
+    //display: flex;
+    //-webkit-justify-content: space-around;
+    //justify-content: space-around;
+
+
+    background-color: #e7e7e7;
+    .flex {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-justify-content: space-around;
+      justify-content: space-around;
+      
+      div:last-child {
+        width: 200px;
+        height: 100%;
+        //background-color: red;
+        //border: 1px solid black;
+      }
+  //    p {
+  //      -webkit-flex: none;
+  //      flex: none;
+  //    }
+    }
+  }
+  
+}
+
+
+
+
+//section.map-block {
+//  //border: 1px solid black;
+//
+//}
+//
+//  width: 360px;
+//  height: 200px;
+//
+//  .urban, .rural {
+//    float: left;
+//  }
+//
+//  .map {
+//    width: 165px;
+//    margin: 5px;
+//  }
+//
+//}

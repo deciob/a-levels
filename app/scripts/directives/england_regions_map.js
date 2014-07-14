@@ -3,11 +3,11 @@
 app.directive('englandRegionsMap', function(slugifyNameService) {
   return {
     restrict: 'E',
-    template: '<div class="map">{{title}}</div>',
+    //template: '<div class="map"></div>',
     scope: {
       thematicData: '@',
       geomData: '=',
-      title: '@'
+      type: '@'
     },
     link: function(scope, element, attr) {
 
@@ -21,9 +21,9 @@ app.directive('englandRegionsMap', function(slugifyNameService) {
             return typeof el === "number" ? el : void 0;
           });
 
-      var scale = d3.scale.linear()
-        .domain( [d3.max(numericData), d3.min(numericData)] )
-        .range([0.5, 1]);
+      var scale = d3.scale.quantize()
+        .domain( [d3.min(numericData), d3.max(numericData)] )
+        .range(d3.range(9).map(function(i) { return "q" + i + "-9"; }));
       
       var svg = d3.select(el).append('svg')
           .attr('width', width)
@@ -48,15 +48,18 @@ app.directive('englandRegionsMap', function(slugifyNameService) {
     
       svg.selectAll('.region-' + scope.index)
         .data(regions.features)
-      .enter().append('path')
-        .attr('class', 'region-' + scope.index)
-        .attr('class', function(d) { 
-          return 'region ' + slugifyName(d.properties.NAME); })
-        .attr('d', path)
-        .style("fill", function(d){
-          return d3.hsl(200, scale(thematicData[slugifyName(d.properties.NAME)]), 
-            .3).toString();
-        });
+      .enter().insert('path')
+        //.attr('class', 'region-' + scope.index)
+        //.attr('class', function(d) { 
+        //  return 'region ' + slugifyName(d.properties.NAME); })
+        .attr("class", function(d) { 
+          return "q " + scale(thematicData[slugifyName(d.properties.NAME)]); })
+        .attr('d', path);
+
+        //.style("fill", function(d){
+        //  return d3.hsl(200, scale(thematicData[slugifyName(d.properties.NAME)]), 
+        //    .3).toString();
+        //});
 
     }
   };
