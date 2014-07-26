@@ -16,5 +16,6 @@ Angular app based on Yeoman
 npm install -g yo
 npm install -g generator-angular
 npm install
+bower install
 grunt serve
 ```
