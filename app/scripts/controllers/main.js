@@ -8,17 +8,17 @@
  * Controller of the aLevelsApp
  */
 
-angular.module('aLevelsApp')
-  .controller('MainCtrl', function ($q, $scope, mapDataService, aLevelDataService, parseCsvDataService, slugifyNameService) {
+(function () {
 
+  function MainCtrl($q, $scope, MapDataService, ALevelDataService, ParseCsvDataService, SlugifyNameService) {
     // my model
     var data = $scope.data = {};
 
     $q.all([
-      mapDataService.getData(),
-      aLevelDataService.getData()
+      MapDataService.getData(),
+      ALevelDataService.getData()
     ]).then(function(res){
-      var rawCsvData = parseCsvDataService.parse(res[1].data, function(d) {
+      var rawCsvData = ParseCsvDataService.parse(res[1].data, function(d) {
         return {
           eastern: +d['East'],
           east_midlands: +d['East Midlands'],
@@ -31,7 +31,7 @@ angular.module('aLevelsApp')
           yorkshire_and_the_humber: +d['Yorkshire and the Humber'],
           type: d['type'],
           title: d['title'],
-          slug: slugifyNameService.slugify(d['title'])
+          slug: SlugifyNameService.slugify(d['title'])
         };
       });
       $scope.data.geom = res[0].data;
@@ -41,7 +41,9 @@ angular.module('aLevelsApp')
       $scope.thematic_length = rawCsvData.length;
 
     }, function(error){return console.error(error);});
+  }
 
-  });
+  angular.module('aLevelsApp')
+    .controller('MainCtrl', MainCtrl);
 
-
+})();

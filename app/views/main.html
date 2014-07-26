@@ -6,12 +6,12 @@
   <section class="map-block">
 
     <p>Urban</p>
-    
-    <div class="flex"> 
+
+    <div class="flex">
       <section ng-repeat="stat in data.thematic">
-        
+
         <england-regions-map thematic-data="{{ stat[0] }}" geom-data="data.geom" index={{$index}}></england-regions-map>
-        
+
       </section>
     </div>
 
@@ -25,12 +25,9 @@
         <div>
           <p>{{stat[1].title}}</p>
         </div>
-      
+
       </section>
     </div>
-
-
-   
 
   </section>
 

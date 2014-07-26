@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 
-var app = angular
+angular
   .module('aLevelsApp', [
     'ngAnimate',
     'ngCookies',
@@ -17,9 +17,8 @@ var app = angular
     'ngRoute',
     'ngSanitize',
     'ngTouch'
-  ]);
-
-app.config(function ($routeProvider) {
+  ])
+  .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -33,7 +32,3 @@ app.config(function ($routeProvider) {
         redirectTo: '/'
       });
   });
-
-//app.run(function($rootScope, mapDataService) {
-//  $rootScope.mapData = mapDataService.getMapData();
-//});

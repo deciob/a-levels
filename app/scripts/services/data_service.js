@@ -1,37 +1,39 @@
 'use strict';
 
-app.service('mapDataService', function($http){
+(function() {
 
-    var url = 'data/regions_england_wgs84.topo.json';
-
-    var resource = $http.get(url);
-
-    this.getData = function() {
-      return resource;
-    };
-
-});
-
-app.service('aLevelDataService', function($http){
-
-    var url = 'data/a_levels_regional_urban.csv';
-
-    var resource = $http.get(url);
+  function MapDataService($http) {
+    var url = 'data/regions_england_wgs84.topo.json',
+      resource = $http.get(url);
 
     this.getData = function() {
       return resource;
     };
+  }
 
-});
+  function ALevelDataService($http) {
+    var url = 'data/a_levels_regional_urban.csv',
+      resource = $http.get(url);
 
-app.service('parseCsvDataService', function(){
+    this.getData = function() {
+      return resource;
+    };
+  }
 
-  this.parse = function(data, accessor) {
-    if (accessor !== undefined) {
-      return d3.csv.parse(data, accessor);
-    } else {
-      return d3.csv.parse(data);
+  function ParseCsvDataService() {
+    this.parse = function(data, accessor) {
+      if (accessor !== undefined) {
+        return d3.csv.parse(data, accessor);
+      } else {
+        return d3.csv.parse(data);
+      }
     }
   }
-  
-});
+
+  angular
+    .module('aLevelsApp')
+    .service('MapDataService', MapDataService)
+    .service('ALevelDataService', ALevelDataService)
+    .service('ParseCsvDataService', ParseCsvDataService);
+
+})();
