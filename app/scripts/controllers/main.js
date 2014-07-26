@@ -38,6 +38,8 @@ angular.module('aLevelsApp')
       $scope.data.thematic = _.groupBy(rawCsvData, function(o) {
         return o.slug;
       });
+      $scope.thematic_length = rawCsvData.length;
+
     }, function(error){return console.error(error);});
 
   });

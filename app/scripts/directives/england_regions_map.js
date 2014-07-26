@@ -3,10 +3,10 @@
 app.directive('englandRegionsMap', function(slugifyNameService) {
   return {
     restrict: 'E',
-    //template: '<div class="map"></div>',
     scope: {
       thematicData: '@',
       geomData: '=',
+      index: '@',
       type: '@'
     },
     link: function(scope, element, attr) {
@@ -14,8 +14,11 @@ app.directive('englandRegionsMap', function(slugifyNameService) {
       //console.log(JSON.parse(scope.thematicData));
 
       var el = element[0],
-          width = 165,
-          height = 187,
+          flex_width = element.parent().parent()[0].clientWidth,
+          flex_elements = 4,
+          factors = [.25, .5, .75, 1],
+          width = flex_width / flex_elements,
+          height = width*1.2,
           thematicData = JSON.parse(scope.thematicData),
           numericData = d3.values(thematicData).filter(function(el){
             return typeof el === "number" ? el : void 0;
@@ -40,7 +43,7 @@ app.directive('englandRegionsMap', function(slugifyNameService) {
         .center([0, 53])
         .rotate([2.4, 0])
         .parallels([50, 55])
-        .scale(1750)
+        .scale(width*10)
         .translate([width / 2, height / 2]);
     
       var path = d3.geo.path()
@@ -49,17 +52,16 @@ app.directive('englandRegionsMap', function(slugifyNameService) {
       svg.selectAll('.region-' + scope.index)
         .data(regions.features)
       .enter().insert('path')
-        //.attr('class', 'region-' + scope.index)
-        //.attr('class', function(d) { 
-        //  return 'region ' + slugifyName(d.properties.NAME); })
         .attr("class", function(d) { 
           return "q " + scale(thematicData[slugifyName(d.properties.NAME)]); })
         .attr('d', path);
 
-        //.style("fill", function(d){
-        //  return d3.hsl(200, scale(thematicData[slugifyName(d.properties.NAME)]), 
-        //    .3).toString();
-        //});
+      scope.$watch(function() {
+        console.log('xx', el.clientWidth);
+      }, function() {
+
+      });
+
 
     }
   };

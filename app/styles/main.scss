@@ -21,7 +21,7 @@
   display: -webkit-flex;
   display: flex;
 
-  height: 80%;
+  height: 100%;
   width: 100%;
 
   .hide {
@@ -40,12 +40,6 @@
     -webkit-flex: 3;
     flex: 3;
 
-    //display: -webkit-flex;
-    //display: flex;
-    //-webkit-justify-content: space-around;
-    //justify-content: space-around;
-
-
     background-color: #e7e7e7;
     .flex {
       display: -webkit-flex;
@@ -59,33 +53,8 @@
         //background-color: red;
         //border: 1px solid black;
       }
-  //    p {
-  //      -webkit-flex: none;
-  //      flex: none;
-  //    }
+
     }
   }
   
 }
-
-
-
-
-//section.map-block {
-//  //border: 1px solid black;
-//
-//}
-//
-//  width: 360px;
-//  height: 200px;
-//
-//  .urban, .rural {
-//    float: left;
-//  }
-//
-//  .map {
-//    width: 165px;
-//    margin: 5px;
-//  }
-//
-//}
