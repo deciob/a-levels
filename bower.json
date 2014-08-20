@@ -10,6 +10,8 @@
     "angular-route": "1.2.x",
     "angular-loader": "1.2.x",
     "angular-mocks": "~1.2.x",
-    "html5-boilerplate": "~4.3.0"
+    "d3": "3.4.9",
+    "topojson": "1.6.14",
+    "lodash": "2.4.1"
   }
 }

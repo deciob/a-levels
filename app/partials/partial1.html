@@ -1,1 +1,28 @@
-<p>This is the partial for view 1.</p>
+<div class="container">
+  <header class="main">
+    <h1>A-level performance maps</h1>
+  </header>
+  <div class="maps">
+    <section class="urban">
+      <header>
+        <h3>Urban</h3>
+      </header>
+      <section class="map" ng-repeat="stat in data.thematic.urban">
+        <d3-map thematic-data="{{stat}}" geom-data="data.geom" index={{$index}}>
+        </d3-map>
+      </section>
+    </section>
+    <section class="rural">
+      <header>
+        <h3>Rural</h3>
+      </header>
+      <section class="map" ng-repeat="stat in data.thematic.urban">
+        <d3-map thematic-data="{{stat}}" geom-data="data.geom" index={{$index}}>
+        </d3-map>
+      </section>
+    </section>
+    </div>
+  <footer>
+    <p>I am the footer</p>
+  </footer>
+</div>

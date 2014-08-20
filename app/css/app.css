@@ -1,30 +1,125 @@
 /* app css stylesheet */
-
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
-}
-
-.menu:before {
-  content: "[";
-}
-
-.menu:after {
-  content: "]";
-}
-
-.menu > li {
-  display: inline;
-}
-
-.menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
-}
-
-.menu > li:nth-child(1):before {
-  content: "";
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
   padding: 0;
-}
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*
+  ========================================
+  Grid
+  ========================================
+*/
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+div.container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  div.container:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  div.container h1, div.container h3 {
+    text-align: center; }
+  div.container section > header {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; }
+  div.container .maps {
+    clear: both;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; }
+  div.container .map {
+    width: 21.05263%;
+    float: left;
+    margin-right: 5.26316%; }
+  div.container .map:last-child {
+    width: 21.05263%;
+    float: right;
+    margin-right: 0; }
+
+/*
+  ========================================
+  Map
+  ========================================
+*/
+.q0-9 {
+  fill: #f7fbff; }
+
+.q1-9 {
+  fill: #deebf7; }
+
+.q2-9 {
+  fill: #c6dbef; }
+
+.q3-9 {
+  fill: #9ecae1; }
+
+.q4-9 {
+  fill: #6baed6; }
+
+.q5-9 {
+  fill: #4292c6; }
+
+.q6-9 {
+  fill: #2171b5; }
+
+.q7-9 {
+  fill: #08519c; }
+
+.q8-9 {
+  fill: #08306b; }
+
+.q {
+  stroke: #F3F3F3;
+  stroke-width: .6px; }
+
+/*# sourceMappingURL=app.css.map */
