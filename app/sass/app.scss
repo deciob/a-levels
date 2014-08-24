@@ -63,6 +63,7 @@ table {
 $susy: (
   global-box-sizing: border-box,
   columns: 4,
+  container: 80%,
   debug: (
     image: hide,
     color: rgba(#66f, .25),
@@ -109,6 +110,57 @@ div.container {
 .q {
   stroke: #F3F3F3;
   stroke-width: .6px;
+}
+
+/*
+  ========================================
+  Typography
+  ========================================
+*/
+
+//@include font-face("Blooming Grove", font-files("type/Cardo-Regular.ttf"));
+//@include font-face("Blooming Grove", font-files("type/Cardo-Bold.ttf"));
+
+@import url(http://fonts.googleapis.com/css?family=Cardo:400,700);
+
+
+body {
+  font-family: "cardo";
+  font-size: 50px; /* Scale origin */
+}
+
+h1 {
+  font-size: 1em;
+  color: #666;
+}
+h3 {
+  font-size: 0.382em;
+  color: #333;
+}
+p {
+  font-size: 0.236em;
+}
+
+/*
+  ========================================
+
+  ========================================
+*/
+
+header.main {
+  text-transform: uppercase;
+  padding: 10px 4px;
+  margin-bottom: 20px;
+
+}
+
+header {
+  padding: 5px 2px;
+
+}
+
+.map {
+  margin-bottom: 28px;
 }
 
 

@@ -8,8 +8,8 @@
         <h3>Urban</h3>
       </header>
       <section class="map" ng-repeat="stat in data.thematic.urban">
-        <d3-map thematic-data="{{stat}}" geom-data="data.geom" index={{$index}}>
-        </d3-map>
+        <d3-map thematic-data="{{stat}}" geom-data="data.geom" index={{$index}}></d3-map>
+        <p>{{stat.title}}</p>
       </section>
     </section>
     <section class="rural">
@@ -17,8 +17,8 @@
         <h3>Rural</h3>
       </header>
       <section class="map" ng-repeat="stat in data.thematic.rural">
-        <d3-map thematic-data="{{stat}}" geom-data="data.geom" index={{$index}}>
-        </d3-map>
+        <d3-map thematic-data="{{stat}}" geom-data="data.geom" index={{$index}}></d3-map>
+        <p>{{stat.title}}</p>
       </section>
     </section>
     </div>
