@@ -23,6 +23,7 @@
             }),
             scale,
             svg,
+            geoData,
             regions,
             projection,
             path;
@@ -40,7 +41,9 @@
             .attr('height', height);
 
         regions = topojson.feature(
-          scope.geomData, scope.geomData.objects.european_region_england_wgs84);
+          topojson.presimplify(scope.geomData),
+          //scope.geomData,
+          scope.geomData.objects.european_region_england_wgs84);
 
         projection = d3.geo.albers()
           .center([0, 53])
