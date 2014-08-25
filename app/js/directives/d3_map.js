@@ -16,7 +16,7 @@
 
         var el = element[0],
             width = element.parent()[0].clientWidth,
-            height = width*1.2,
+            height = width,
             thematicData = JSON.parse(scope.thematicData),
             numericData = d3.values(thematicData).filter(function(el){
               return typeof el === "number" ? el : void 0;
@@ -46,7 +46,7 @@
           scope.geomData.objects.european_region_england_wgs84_s);
 
         projection = d3.geo.albers()
-          .center([0, 53])
+          .center([1.5, 53.2])
           .rotate([2.4, 0])
           .parallels([50, 55])
           .scale(width*10)

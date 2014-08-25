@@ -118,12 +118,12 @@ div.container {
   ========================================
 */
 
-// http://modularscale.com
+  /* http://modularscale.com
+  ----------------------
+    13px @ 1:1.5
+    13px @ 1:1.5
+  ----------------------*/
 
-//@include font-face("Blooming Grove", font-files("type/Cardo-Regular.ttf"));
-//@include font-face("Blooming Grove", font-files("type/Cardo-Bold.ttf"));
-
-//@import url(http://fonts.googleapis.com/css?family=Cardo:400,700);
 @import url(http://fonts.googleapis.com/css?family=Old+Standard+TT:400,700);
 $base-font-size: 13px;
 $base-line-height: 21px;
@@ -143,30 +143,12 @@ h3 {
   @include adjust-font-size-to(19.500px);
   color: #333;
 }
-//p {
-//  font-size: 0.236em;
-//}
-
-/*
-  ========================================
-
-  ========================================
-*/
-
-header.main {
-  text-transform: uppercase;
-  padding: 10px 4px;
-  margin-bottom: 20px;
-
-}
-
-header {
-  padding: 5px 2px;
-
-}
 
 .map {
-  margin-bottom: 28px;
+  //@include leader();
+  @include trailer();
 }
-
-
+header.main {
+  text-transform: uppercase;
+  @include trailer();
+}

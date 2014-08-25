@@ -128,6 +128,11 @@ div.container {
   Typography
   ========================================
 */
+/* http://modularscale.com
+----------------------
+  13px @ 1:1.5
+  13px @ 1:1.5
+----------------------*/
 html {
   font-size: 81.25%;
   line-height: 1.61538em; }
@@ -145,20 +150,11 @@ h3 {
   line-height: 2.15385em;
   color: #333; }
 
-/*
-  ========================================
+.map {
+  margin-bottom: 1.61538em; }
 
-  ========================================
-*/
 header.main {
   text-transform: uppercase;
-  padding: 10px 4px;
-  margin-bottom: 20px; }
-
-header {
-  padding: 5px 2px; }
-
-.map {
-  margin-bottom: 28px; }
+  margin-bottom: 1.61538em; }
 
 /*# sourceMappingURL=app.css.map */
