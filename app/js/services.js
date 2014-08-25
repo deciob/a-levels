@@ -3,7 +3,7 @@
 (function() {
 
   function MapDataService($http) {
-    var url = 'data/regions_england_wgs84.topo.json',
+    var url = 'data/regions_england_wgs84_s.topo.json',
       resource = $http.get(url);
 
     this.getData = function() {

@@ -118,28 +118,34 @@ div.container {
   ========================================
 */
 
+// http://modularscale.com
+
 //@include font-face("Blooming Grove", font-files("type/Cardo-Regular.ttf"));
 //@include font-face("Blooming Grove", font-files("type/Cardo-Bold.ttf"));
 
-@import url(http://fonts.googleapis.com/css?family=Cardo:400,700);
+//@import url(http://fonts.googleapis.com/css?family=Cardo:400,700);
+@import url(http://fonts.googleapis.com/css?family=Old+Standard+TT:400,700);
+$base-font-size: 13px;
+$base-line-height: 21px;
+@include establish-baseline;
 
 
 body {
-  font-family: "cardo";
-  font-size: 50px; /* Scale origin */
+  font-family: 'Old Standard TT', serif;
+  //font-size: 50px; /* Scale origin */
 }
 
 h1 {
-  font-size: 1em;
+  @include adjust-font-size-to(43.875px);
   color: #666;
 }
 h3 {
-  font-size: 0.382em;
+  @include adjust-font-size-to(19.500px);
   color: #333;
 }
-p {
-  font-size: 0.236em;
-}
+//p {
+//  font-size: 0.236em;
+//}
 
 /*
   ========================================

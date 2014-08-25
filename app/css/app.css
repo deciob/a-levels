@@ -3,7 +3,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url(http://fonts.googleapis.com/css?family=Cardo:400,700);
+@import url(http://fonts.googleapis.com/css?family=Old+Standard+TT:400,700);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -128,21 +128,22 @@ div.container {
   Typography
   ========================================
 */
+html {
+  font-size: 81.25%;
+  line-height: 1.61538em; }
+
 body {
-  font-family: "cardo";
-  font-size: 50px;
-  /* Scale origin */ }
+  font-family: 'Old Standard TT', serif; }
 
 h1 {
-  font-size: 1em;
+  font-size: 3.375em;
+  line-height: 1.4359em;
   color: #666; }
 
 h3 {
-  font-size: 0.382em;
+  font-size: 1.5em;
+  line-height: 2.15385em;
   color: #333; }
-
-p {
-  font-size: 0.236em; }
 
 /*
   ========================================
