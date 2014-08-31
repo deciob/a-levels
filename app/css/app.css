@@ -145,7 +145,7 @@ footer {
   position: fixed;
   bottom: 0;
   right: 0;
-  background-color: #f7fbff;
+  padding: 10px 0;
 }
 
 /*
@@ -153,22 +153,22 @@ footer {
   #Generic
   ========================================
 */
-/* line 141, ../scss/app.scss */
+/* line 142, ../scss/app.scss */
 .upper {
   text-transform: uppercase;
 }
 
-/* line 145, ../scss/app.scss */
+/* line 146, ../scss/app.scss */
 .center-text {
   text-align: center;
 }
 
-/* line 149, ../scss/app.scss */
+/* line 150, ../scss/app.scss */
 .big-title {
   color: #666;
 }
 
-/* line 153, ../scss/app.scss */
+/* line 154, ../scss/app.scss */
 .small-title {
   color: #333;
 }
@@ -178,52 +178,52 @@ footer {
   #Map
   ========================================
 */
-/* line 167, ../scss/app.scss */
+/* line 168, ../scss/app.scss */
 .q0-9 {
   fill: #f7fbff;
 }
 
-/* line 168, ../scss/app.scss */
+/* line 169, ../scss/app.scss */
 .q1-9 {
   fill: #deebf7;
 }
 
-/* line 169, ../scss/app.scss */
+/* line 170, ../scss/app.scss */
 .q2-9 {
   fill: #c6dbef;
 }
 
-/* line 170, ../scss/app.scss */
+/* line 171, ../scss/app.scss */
 .q3-9 {
   fill: #9ecae1;
 }
 
-/* line 171, ../scss/app.scss */
+/* line 172, ../scss/app.scss */
 .q4-9 {
   fill: #6baed6;
 }
 
-/* line 172, ../scss/app.scss */
+/* line 173, ../scss/app.scss */
 .q5-9 {
   fill: #4292c6;
 }
 
-/* line 173, ../scss/app.scss */
+/* line 174, ../scss/app.scss */
 .q6-9 {
   fill: #2171b5;
 }
 
-/* line 174, ../scss/app.scss */
+/* line 175, ../scss/app.scss */
 .q7-9 {
   fill: #08519c;
 }
 
-/* line 175, ../scss/app.scss */
+/* line 176, ../scss/app.scss */
 .q8-9 {
   fill: #08306b;
 }
 
-/* line 177, ../scss/app.scss */
+/* line 178, ../scss/app.scss */
 .q {
   stroke: #C4C2C2;
   stroke-width: .5px;
@@ -249,29 +249,29 @@ html {
   line-height: 1.61538em;
 }
 
-/* line 206, ../scss/app.scss */
+/* line 207, ../scss/app.scss */
 body {
   font-family: 'Old Standard TT', serif;
 }
 
-/* line 210, ../scss/app.scss */
+/* line 211, ../scss/app.scss */
 h1 {
   font-size: 3.375em;
   line-height: 1.4359em;
 }
 
-/* line 214, ../scss/app.scss */
+/* line 215, ../scss/app.scss */
 h3 {
   font-size: 1.5em;
   line-height: 2.15385em;
 }
 
-/* line 218, ../scss/app.scss */
+/* line 219, ../scss/app.scss */
 .maps__map {
   margin-bottom: 1.61538em;
 }
 
-/* line 222, ../scss/app.scss */
+/* line 223, ../scss/app.scss */
 .main {
   margin-bottom: 1.61538em;
 }
