@@ -1,5 +1,16 @@
 @import "compass";
 @import "susy";
+@import "breakpoint";
+
+
+
+
+/*
+  ============================================
+  #Global
+  ============================================
+*/
+$light-background: #f7fbff;
 
 
 
@@ -69,12 +80,14 @@ table {
   ========================================
 */
 
+// compass mixin
 @include border-box-sizing;
 
 $susy: (
   global-box-sizing: border-box,
   columns: 4,
-  container: 65%,
+  container: 100%,
+  gutter-position: split,
   debug: (
     image: hide,
     color: rgba(#66f, .25),
@@ -86,15 +99,16 @@ $susy: (
 
 .container {
   @include container;
+  @include breakpoint(900px) {
+    @include container(80%);
+  }
 }
 
   .maps {
-    @include full;
+    @include full; //clearfix
   }
 
-    .maps__urban > header {
-      @include span(4);
-    }
+    @include breakpoint(700px) {
 
       .maps__map {
         @include span(1);
@@ -103,6 +117,16 @@ $susy: (
       .maps__map:last-child {
           @include span(last 1);
       }
+
+    }
+
+  footer {
+    @include full; //clearfix
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: $light-background;
+  }
 
 
 
