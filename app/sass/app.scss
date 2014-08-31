@@ -1,11 +1,17 @@
-/* app css stylesheet */
-
 @import "compass";
 @import "susy";
 
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
+
+
+
+
+/*
+  ============================================
+  #CSS RESET
+    http://meyerweb.com/eric/tools/css/reset/
+    v2.0 | 20110126
+    License: none (public domain)
+  ============================================
 */
 
 html, body, div, span, applet, object, iframe,
@@ -52,9 +58,14 @@ table {
   border-spacing: 0;
 }
 
+
+
+
+
 /*
   ========================================
-  Grid
+  #Susy Grid
+    http://susy.oddbird.net/
   ========================================
 */
 
@@ -72,28 +83,60 @@ $susy: (
   )
 );
 
-div.container {
+
+.container {
   @include container;
-  h1, h3 {
-    text-align: center;
-  }
-  section > header{
-    @include span(4);
-  }
+}
+
   .maps {
     @include full;
   }
-  .map {
-    @include span(1);
-  }
-  .map:last-child {
-    @include span(last 1);
-  }
-}
+
+    .maps__urban > header {
+      @include span(4);
+    }
+
+      .maps__map {
+        @include span(1);
+      }
+
+      .maps__map:last-child {
+          @include span(last 1);
+      }
+
+
+
+
 
 /*
   ========================================
-  Map
+  #Generic
+  ========================================
+*/
+
+.upper {
+  text-transform: uppercase;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.big-title {
+  color: #666;
+}
+
+.small-title {
+  color: #333;
+}
+
+
+
+
+
+/*
+  ========================================
+  #Map
   ========================================
 */
 
@@ -112,43 +155,46 @@ div.container {
   stroke-width: .5px;
 }
 
+
+
+
+
 /*
   ========================================
-  Typography
+  #Typography & vertical_rhythm
+
+    http://modularscale.com
+    ----------------------
+      13px @ 1:1.5
+      13px @ 1:1.5
+    ----------------------
+
+    http://compass-style.org/reference/compass/typography/vertical_rhythm/
   ========================================
 */
 
-  /* http://modularscale.com
-  ----------------------
-    13px @ 1:1.5
-    13px @ 1:1.5
-  ----------------------*/
-
 @import url(http://fonts.googleapis.com/css?family=Old+Standard+TT:400,700);
-$base-font-size: 13px;
+$base-font-size: 13px;  /* Scale origin */
 $base-line-height: 21px;
 @include establish-baseline;
 
 
 body {
   font-family: 'Old Standard TT', serif;
-  //font-size: 50px; /* Scale origin */
 }
 
 h1 {
   @include adjust-font-size-to(43.875px);
-  color: #666;
-}
-h3 {
-  @include adjust-font-size-to(19.500px);
-  color: #333;
 }
 
-.map {
-  //@include leader();
+h3 {
+  @include adjust-font-size-to(19.500px);
+}
+
+.maps__map {
   @include trailer();
 }
-header.main {
-  text-transform: uppercase;
+
+.main {
   @include trailer();
 }

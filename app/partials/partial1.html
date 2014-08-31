@@ -1,22 +1,22 @@
 <div class="container">
-  <header class="main">
-    <h1>A-level performance maps</h1>
+  <header class="main  upper">
+    <h1 class="big-title  center-text">A-level performance maps</h1>
   </header>
   <div class="maps">
-    <section class="urban">
+    <section class="maps__urban">
       <header>
-        <h3>Urban</h3>
+        <h3 class="small-title  center-text">Urban</h3>
       </header>
-      <section class="map" ng-repeat="stat in data.thematic.urban">
+      <section class="maps__map" ng-repeat="stat in data.thematic.urban">
         <d3-map thematic-data="{{stat}}" geom-data="data.geom" index={{$index}}></d3-map>
         <p>{{stat.title}}</p>
       </section>
     </section>
-    <section class="rural">
+    <section class="maps__rural">
       <header>
-        <h3>Rural</h3>
+        <h3 class="small-title  center-text">Rural</h3>
       </header>
-      <section class="map" ng-repeat="stat in data.thematic.rural">
+      <section class="maps__map" ng-repeat="stat in data.thematic.rural">
         <d3-map thematic-data="{{stat}}" geom-data="data.geom" index={{$index}}></d3-map>
         <p>{{stat.title}}</p>
       </section>

@@ -1,7 +1,10 @@
-/* app css stylesheet */
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
+/*
+  ============================================
+  #CSS RESET
+    http://meyerweb.com/eric/tools/css/reset/
+    v2.0 | 20110126
+    License: none (public domain)
+  ============================================
 */
 @import url(http://fonts.googleapis.com/css?family=Old+Standard+TT:400,700);
 html, body, div, span, applet, object, iframe,
@@ -49,7 +52,8 @@ table {
 
 /*
   ========================================
-  Grid
+  #Susy Grid
+    http://susy.oddbird.net/
   ========================================
 */
 *, *:before, *:after {
@@ -57,39 +61,58 @@ table {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-div.container {
+.container {
   max-width: 65%;
   margin-left: auto;
   margin-right: auto; }
-  div.container:after {
+  .container:after {
     content: " ";
     display: block;
     clear: both; }
-  div.container h1, div.container h3 {
-    text-align: center; }
-  div.container section > header {
-    width: 100%;
-    float: left;
-    margin-left: 0;
-    margin-right: 0; }
-  div.container .maps {
-    clear: both;
-    width: 100%;
-    float: left;
-    margin-left: 0;
-    margin-right: 0; }
-  div.container .map {
-    width: 21.05263%;
-    float: left;
-    margin-right: 5.26316%; }
-  div.container .map:last-child {
-    width: 21.05263%;
-    float: right;
-    margin-right: 0; }
+
+.maps {
+  clear: both;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0; }
+
+.maps__urban > header {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0; }
+
+.maps__map {
+  width: 21.05263%;
+  float: left;
+  margin-right: 5.26316%; }
+
+.maps__map:last-child {
+  width: 21.05263%;
+  float: right;
+  margin-right: 0; }
 
 /*
   ========================================
-  Map
+  #Generic
+  ========================================
+*/
+.upper {
+  text-transform: uppercase; }
+
+.center-text {
+  text-align: center; }
+
+.big-title {
+  color: #666; }
+
+.small-title {
+  color: #333; }
+
+/*
+  ========================================
+  #Map
   ========================================
 */
 .q0-9 {
@@ -125,14 +148,18 @@ div.container {
 
 /*
   ========================================
-  Typography
+  #Typography & vertical_rhythm
+
+    http://modularscale.com
+    ----------------------
+      13px @ 1:1.5
+      13px @ 1:1.5
+    ----------------------
+
+    http://compass-style.org/reference/compass/typography/vertical_rhythm/
   ========================================
 */
-/* http://modularscale.com
-----------------------
-  13px @ 1:1.5
-  13px @ 1:1.5
-----------------------*/
+/* Scale origin */
 html {
   font-size: 81.25%;
   line-height: 1.61538em; }
@@ -142,19 +169,16 @@ body {
 
 h1 {
   font-size: 3.375em;
-  line-height: 1.4359em;
-  color: #666; }
+  line-height: 1.4359em; }
 
 h3 {
   font-size: 1.5em;
-  line-height: 2.15385em;
-  color: #333; }
+  line-height: 2.15385em; }
 
-.map {
+.maps__map {
   margin-bottom: 1.61538em; }
 
-header.main {
-  text-transform: uppercase;
+.main {
   margin-bottom: 1.61538em; }
 
 /*# sourceMappingURL=app.css.map */
