@@ -175,62 +175,6 @@ footer {
 
 /*
   ========================================
-  #Map
-  ========================================
-*/
-/* line 168, ../scss/app.scss */
-.q0-9 {
-  fill: #f7fbff;
-}
-
-/* line 169, ../scss/app.scss */
-.q1-9 {
-  fill: #deebf7;
-}
-
-/* line 170, ../scss/app.scss */
-.q2-9 {
-  fill: #c6dbef;
-}
-
-/* line 171, ../scss/app.scss */
-.q3-9 {
-  fill: #9ecae1;
-}
-
-/* line 172, ../scss/app.scss */
-.q4-9 {
-  fill: #6baed6;
-}
-
-/* line 173, ../scss/app.scss */
-.q5-9 {
-  fill: #4292c6;
-}
-
-/* line 174, ../scss/app.scss */
-.q6-9 {
-  fill: #2171b5;
-}
-
-/* line 175, ../scss/app.scss */
-.q7-9 {
-  fill: #08519c;
-}
-
-/* line 176, ../scss/app.scss */
-.q8-9 {
-  fill: #08306b;
-}
-
-/* line 178, ../scss/app.scss */
-.q {
-  stroke: #C4C2C2;
-  stroke-width: .5px;
-}
-
-/*
-  ========================================
   #Typography & vertical_rhythm
 
     http://modularscale.com
@@ -249,29 +193,85 @@ html {
   line-height: 1.61538em;
 }
 
-/* line 207, ../scss/app.scss */
+/* line 182, ../scss/app.scss */
 body {
   font-family: 'Old Standard TT', serif;
 }
 
-/* line 211, ../scss/app.scss */
+/* line 186, ../scss/app.scss */
 h1 {
   font-size: 3.375em;
   line-height: 1.4359em;
 }
 
-/* line 215, ../scss/app.scss */
+/* line 190, ../scss/app.scss */
 h3 {
   font-size: 1.5em;
   line-height: 2.15385em;
 }
 
-/* line 219, ../scss/app.scss */
+/* line 194, ../scss/app.scss */
 .maps__map {
   margin-bottom: 1.61538em;
 }
 
-/* line 223, ../scss/app.scss */
+/* line 198, ../scss/app.scss */
 .main {
   margin-bottom: 1.61538em;
+}
+
+/*
+  ========================================
+  #Map
+  ========================================
+*/
+/* line 218, ../scss/app.scss */
+.q0-9 {
+  fill: #f7fbff;
+}
+
+/* line 219, ../scss/app.scss */
+.q1-9 {
+  fill: #deebf7;
+}
+
+/* line 220, ../scss/app.scss */
+.q2-9 {
+  fill: #c6dbef;
+}
+
+/* line 221, ../scss/app.scss */
+.q3-9 {
+  fill: #9ecae1;
+}
+
+/* line 222, ../scss/app.scss */
+.q4-9 {
+  fill: #6baed6;
+}
+
+/* line 223, ../scss/app.scss */
+.q5-9 {
+  fill: #4292c6;
+}
+
+/* line 224, ../scss/app.scss */
+.q6-9 {
+  fill: #2171b5;
+}
+
+/* line 225, ../scss/app.scss */
+.q7-9 {
+  fill: #08519c;
+}
+
+/* line 226, ../scss/app.scss */
+.q8-9 {
+  fill: #08306b;
+}
+
+/* line 228, ../scss/app.scss */
+.q {
+  stroke: #C4C2C2;
+  stroke-width: .5px;
 }

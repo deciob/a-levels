@@ -4,9 +4,11 @@
 
 (function () {
 
-  function MainCtrl($q, $scope, MapDataService, ALevelDataService, ParseCsvDataService, SlugifyNameService) {
+  function MainCtrl($q, $scope, $window, MapDataService, ALevelDataService, ParseCsvDataService, SlugifyNameService) {
     // my model
     var data = $scope.data = {};
+
+    angular.element($window).on('resize', function(){ $scope.$apply() });
 
     $q.all([
       MapDataService.getData(),
