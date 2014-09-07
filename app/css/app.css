@@ -118,8 +118,21 @@ table {
   margin-right: 2.5%;
 }
 
+/* line 111, ../scss/app.scss */
+.maps__urban > header, .maps__rural > header {
+  clear: both;
+  width: 95%;
+  float: left;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  width: 95%;
+  float: left;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
 @media (min-width: 700px) {
-  /* line 113, ../scss/app.scss */
+  /* line 118, ../scss/app.scss */
   .maps__map {
     width: 20%;
     float: left;
@@ -127,7 +140,7 @@ table {
     margin-right: 2.5%;
   }
 
-  /* line 117, ../scss/app.scss */
+  /* line 122, ../scss/app.scss */
   .maps__map:last-child {
     width: 20%;
     float: right;
@@ -135,40 +148,27 @@ table {
     margin-right: 2.5%;
   }
 }
-/* line 123, ../scss/app.scss */
-footer {
-  clear: both;
-  width: 95%;
-  float: left;
-  margin-left: 2.5%;
-  margin-right: 2.5%;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  padding: 10px 0;
-}
-
 /*
   ========================================
   #Generic
   ========================================
 */
-/* line 142, ../scss/app.scss */
+/* line 138, ../scss/app.scss */
 .upper {
   text-transform: uppercase;
 }
 
-/* line 146, ../scss/app.scss */
+/* line 142, ../scss/app.scss */
 .center-text {
   text-align: center;
 }
 
-/* line 150, ../scss/app.scss */
+/* line 146, ../scss/app.scss */
 .big-title {
   color: #666;
 }
 
-/* line 154, ../scss/app.scss */
+/* line 150, ../scss/app.scss */
 .small-title {
   color: #333;
 }
@@ -193,29 +193,38 @@ html {
   line-height: 1.61538em;
 }
 
-/* line 182, ../scss/app.scss */
+/* line 178, ../scss/app.scss */
 body {
   font-family: 'Old Standard TT', serif;
 }
 
-/* line 186, ../scss/app.scss */
+/* line 182, ../scss/app.scss */
 h1 {
   font-size: 3.375em;
   line-height: 1.4359em;
 }
 
-/* line 190, ../scss/app.scss */
+/* line 186, ../scss/app.scss */
 h3 {
   font-size: 1.5em;
   line-height: 2.15385em;
 }
+@media (max-width: 700px) {
+  /* line 186, ../scss/app.scss */
+  h3 {
+    font-size: 2.25em;
+    line-height: 1.4359em;
+    margin-top: 1.61538em;
+    margin-bottom: 1.61538em;
+  }
+}
 
-/* line 194, ../scss/app.scss */
+/* line 195, ../scss/app.scss */
 .maps__map {
   margin-bottom: 1.61538em;
 }
 
-/* line 198, ../scss/app.scss */
+/* line 199, ../scss/app.scss */
 .main {
   margin-bottom: 1.61538em;
 }
@@ -225,53 +234,68 @@ h3 {
   #Map
   ========================================
 */
-/* line 218, ../scss/app.scss */
+/* line 219, ../scss/app.scss */
 .q0-9 {
   fill: #f7fbff;
 }
 
-/* line 219, ../scss/app.scss */
+/* line 220, ../scss/app.scss */
 .q1-9 {
   fill: #deebf7;
 }
 
-/* line 220, ../scss/app.scss */
+/* line 221, ../scss/app.scss */
 .q2-9 {
   fill: #c6dbef;
 }
 
-/* line 221, ../scss/app.scss */
+/* line 222, ../scss/app.scss */
 .q3-9 {
   fill: #9ecae1;
 }
 
-/* line 222, ../scss/app.scss */
+/* line 223, ../scss/app.scss */
 .q4-9 {
   fill: #6baed6;
 }
 
-/* line 223, ../scss/app.scss */
+/* line 224, ../scss/app.scss */
 .q5-9 {
   fill: #4292c6;
 }
 
-/* line 224, ../scss/app.scss */
+/* line 225, ../scss/app.scss */
 .q6-9 {
   fill: #2171b5;
 }
 
-/* line 225, ../scss/app.scss */
+/* line 226, ../scss/app.scss */
 .q7-9 {
   fill: #08519c;
 }
 
-/* line 226, ../scss/app.scss */
+/* line 227, ../scss/app.scss */
 .q8-9 {
   fill: #08306b;
 }
 
-/* line 228, ../scss/app.scss */
+/* line 229, ../scss/app.scss */
 .q {
   stroke: #C4C2C2;
   stroke-width: .5px;
+}
+
+/*
+  ========================================
+  #Footer
+  ========================================
+*/
+/* line 244, ../scss/app.scss */
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: #F7F7F7;
+  padding: 10px 5px;
 }

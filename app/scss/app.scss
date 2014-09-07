@@ -10,7 +10,7 @@
   #Global
   ============================================
 */
-$light-background: #f7fbff;
+$light-background: #F7F7F7;
 
 
 
@@ -108,6 +108,11 @@ $susy: (
     @include full; //clearfix
   }
 
+    .maps__urban > header, .maps__rural > header {
+      @include full; //clearfix
+      @include span(4);
+    }
+
     @include breakpoint(700px) {
 
       .maps__map {
@@ -119,15 +124,6 @@ $susy: (
       }
 
     }
-
-  footer {
-    @include full; //clearfix
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    //background-color: $light-background;
-    padding: 10px 0;
-  }
 
 
 
@@ -189,6 +185,11 @@ h1 {
 
 h3 {
   @include adjust-font-size-to(19.500px);
+  @include breakpoint(max-width 700px) {
+    @include adjust-font-size-to(29.250px);
+    @include leader();
+    @include trailer();
+  }
 }
 
 .maps__map {
@@ -230,3 +231,21 @@ h3 {
   stroke-width: .5px;
 }
 
+
+
+
+
+/*
+  ========================================
+  #Footer
+  ========================================
+*/
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: $light-background;
+  padding: 10px 5px;
+}
