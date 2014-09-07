@@ -5,7 +5,17 @@
 angular.module('aLevelsApp', [
   'ngRoute'
 ])
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/', {templateUrl: 'partials/partial1.html', controller: 'MainCtrl'});
+.constant('MAP_PARTIAL', {
+  path: 'app/partials/partial1.html'
+})
+.constant('GEO_DATA', {
+  path: 'app/data/regions_england_wgs84_s.topo.json'
+})
+.constant('THEME_DATA', {
+  path: 'app/data/a_levels_regional_urban.csv'
+})
+.config(['$routeProvider', 'MAP_PARTIAL', function($routeProvider, MAP_PARTIAL) {
+  $routeProvider.when('/', {templateUrl: MAP_PARTIAL.path, controller: 'MainCtrl'});
   $routeProvider.otherwise({redirectTo: '/'});
-}]);
+}])
+;

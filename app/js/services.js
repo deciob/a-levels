@@ -2,8 +2,8 @@
 
 (function() {
 
-  function MapDataService($http) {
-    var url = 'data/regions_england_wgs84_s.topo.json',
+  function MapDataService($http, GEO_DATA) {
+    var url = GEO_DATA.path,
       resource = $http.get(url);
 
     this.getData = function() {
@@ -11,8 +11,8 @@
     };
   }
 
-  function ALevelDataService($http) {
-    var url = 'data/a_levels_regional_urban.csv',
+  function ALevelDataService($http, THEME_DATA) {
+    var url = THEME_DATA.path,
       resource = $http.get(url);
 
     this.getData = function() {
