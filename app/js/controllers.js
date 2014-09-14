@@ -4,7 +4,7 @@
 
 (function () {
 
-  function MainCtrl($q, $scope, $window, MapDataService, ALevelDataService, ParseCsvDataService, SlugifyNameService) {
+  function MainCtrl($q, $scope, $window, MapDataService, ALevelDataService, ParseCsvDataService, SlugifyNameService, ALevelDataFactory, UkGeomFactory) {
     // my model
     var data = $scope.data = {};
 
@@ -30,10 +30,10 @@
           slug: SlugifyNameService.slugify(d['title'])
         };
       });
-      $scope.data.geom = res[0].data;
-      $scope.data.thematic = _.groupBy(rawCsvData, function(o) {
-        return o.type;
-      });
+      UkGeomFactory.addAll(res[0].data);
+      $scope.data.geom = UkGeomFactory.data;
+      ALevelDataFactory.addAll(rawCsvData);
+      $scope.data.thematic = ALevelDataFactory.data;
       $scope.thematic_length = rawCsvData.length;
 
     }, function(error){return console.error(error);});
